@@ -1,9 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import '../App.css';
 
 export default function Dropdown(props) {
-
-    const [characterName, setCharacterName ] = useState('');
     const [isOpen, setOpenState] = useState(false);
 
     function openBox() {
@@ -17,13 +15,13 @@ export default function Dropdown(props) {
         <div className="flex-column">
             <p>{props.formText}</p>
             <div className="dropdown-menu" onClick={openBox}>
-                {characterName}
+                {props.charName}
             </div>
             {isOpen && <div className="dropdown-menu-box">
                 {props.characters.map(char => {
                 return (
                     <Option name={char} key={char} onClick={() => {
-                        setCharacterName(char)
+                        props.onChange(char)
                         openBox()
                     }}/>
                 )
