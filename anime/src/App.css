@@ -3,3 +3,40 @@
   font-size: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.App-body {
+  width: 90%;
+  margin: 0px auto;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.dropdown-menu {
+  width: 300px;
+  border: 2px black solid;
+  padding: 10px 20px;
+}
+
+.dropdown-menu-box {
+  display: block;
+}
+
+.dropdown-option {
+  justify-content: center;
+  word-wrap: break-word;
+  padding: 10px 20px;
+  width: 300px;
+  border: 1px black solid;
+}
+
+.dropdown-option:hover {
+  background-color: beige;
+}
